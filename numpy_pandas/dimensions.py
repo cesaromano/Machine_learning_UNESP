@@ -28,3 +28,21 @@ print(f"Dimension number: {tensor.ndim}")
 vector = np.array([1, 2, 3], ndmin=10)
 print(vector)
 print(f"Dimension number: {vector.ndim}")
+
+#parameter axis=1, 0 defines if dimension is added to the row or column
+# np.expand_dims(array, axis to expand)
+
+expanded = np.expand_dims(np.array([1, 2, 3]), axis=1)
+print(expanded)
+print(expanded.ndim)
+
+#to delete dimensions aren't used
+
+print(vector, vector.ndim)
+vector2 = np.squeeze(vector)
+print(vector2, vector2.ndim)
+
+#creating a 5 dimensions tensor
+
+tensor5 = np.array([1], ndmin=5)
+print(tensor5, tensor5.ndim)
